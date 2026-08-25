@@ -9,6 +9,7 @@ const ProductDetails = lazy(() => import("../pages/ProductDetails"));
 const Cart = lazy(() => import("../pages/Cart"));
 const Checkout = lazy(() => import("../pages/Checkout"));
 const OrderTracking = lazy(() => import("../pages/OrderTracking"));
+const MyOrders = lazy(() => import("../pages/MyOrders"));
 const About = lazy(() => import("../pages/About"));
 const Gallery = lazy(() => import("../pages/Gallery"));
 const Reviews = lazy(() => import("../pages/Reviews"));
@@ -62,9 +63,9 @@ export default function AppRoutes() {
           }
         />
 
-        <Route path="/order/:orderId" element={<OrderTracking />} />
-        <Route path="/orders" element={<OrderTracking />} />
+        <Route path="/orders" element={<MyOrders />} />
 
+        <Route path="/order/:orderId" element={<OrderTracking />} />
         <Route path="/about" element={<About />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/reviews" element={<Reviews />} />

@@ -11,7 +11,8 @@ import Button from "../components/ui/Button";
 
 export default function OrderTracking() {
   const { orderId } = useParams();
-  const { data: order, loading, error } = useFetch(() => orderApi.track(orderId), [orderId]);
+  const { data: order, loading, error } =
+    useFetch(() => orderApi.getMyOrder(orderId), [orderId]);
 
   if (loading) {
     return (
